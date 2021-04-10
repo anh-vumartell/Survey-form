@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Forms</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="title-container">
+        <h1 class="title">Yoganese Retreat Survey Form</h1>
+        <p class="description">Have a great time in Aix-en-Provence!</p>
+      </div>
+
+      <div class="form-container">
+        <form action="#" id="survey-form">
+          <label for="name" id="name-label">Name</label>
+          <input type="text" id="name" placeholder="Enter your name" /><br />
+
+          <label for="email" id="email-label">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" /><br />
+
+          <label for="age" id="number-label">Age</label>
+          <input type="number" id="age" min="18" max="70" /><br /><br />
+
+          What option best describes your current role?<br />
+          <select name="roles" id="dropdown">
+            <option value="student">Student</option>
+            <option value="fulltime">Fulltime employed</option>
+            <option value="parttime">Parttime employed</option>
+            <option value="self-employed">Self-employed</option>
+            <option value="others">Others</option>
+          </select>
+          <br /><br />
+          Would you recommend Yoganese Retreat to a friend?<br />
+          <input
+            type="radio"
+            id="radio"
+            name="recommendation"
+            value="Definitely"
+            checked
+          />
+          Definitely
+          <input type="radio" id="radio" name="recommendation" value="Maybe" />
+          Maybe
+          <input
+            type="radio"
+            id="radio"
+            name="recommendation"
+            value="Not sure"
+          />
+          Not sure <br /><br />
+
+          What is your favorite activities of Yoganese Retreat?<br />
+          <select name="activities" id="dropdown">
+            <option value="vegan-cooking-class">Vegan Cooking Class</option>
+            <option value="morning-stretch">Morning Stretch</option>
+            <option value="biking-tour">Biking tour</option>
+            <option value="meditation">Meditation By The Pool</option>
+            <option value="herbal-massage">Herbal Massage</option>
+          </select>
+          <br /><br />
+
+          What would you like to experience in the next Yoganese Retreat?<br />
+          <input
+            type="checkbox"
+            id="checkbox"
+            name="experience"
+            value="herbal-bath"
+          />
+          Herbal bath
+          <input
+            type="checkbox"
+            id="checkbox"
+            name="experience"
+            value="food-tour"
+          />
+          Food tour
+          <input
+            type="checkbox"
+            id="checkbox"
+            name="experience"
+            value="hot-yoga"
+          />
+          Hot Yoga
+          <input
+            type="checkbox"
+            id="checkbox"
+            name="experience"
+            value="yin-yang-yoga"
+          />
+          Ying-Yang Yoga <br /><br />
+          Any comments or suggestions?<br />
+          <textarea
+            name="comment"
+            placeholder="Enter your comment here..."
+            cols="50"
+            rows="10"
+          ></textarea
+          ><br />
+          <button type="submit" id="submit" onclick="validate()">Submit</button>
+        </form>
+        <div class="error-msg"></div>
+      </div>
+    </div>
+    <script type="text/javascript" src="validateForm.js"></script>
+  </body>
+</html>
