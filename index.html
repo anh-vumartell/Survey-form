@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Survey Forms</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -18,7 +20,7 @@
       </div>
 
       <div class="form-container">
-        <form action="#" id="survey-form">
+        <form action="#" class="survey-form">
           <label for="name" id="name-label">Name</label>
           <input type="text" id="name" placeholder="Enter your name" /><br />
 
@@ -103,8 +105,8 @@
             rows="10"
           ></textarea
           ><br />
-          <button type="submit" id="submit" onclick="validate()">Submit</button>
         </form>
+        <button type="submit" id="submit" onclick="validate()">Submit</button>
         <div class="error-msg"></div>
       </div>
     </div>
