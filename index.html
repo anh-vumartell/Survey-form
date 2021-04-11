@@ -22,16 +22,33 @@
       <div class="form-container">
         <form action="#" class="survey-form">
           <label for="name" id="name-label">Name</label>
-          <input type="text" id="name" placeholder="Enter your name" /><br />
+          <input
+            class="name"
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+          /><br />
 
           <label for="email" id="email-label">Email</label>
-          <input type="email" id="email" placeholder="Enter your email" /><br />
+          <input
+            class="email"
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+          /><br />
 
           <label for="age" id="number-label">Age</label>
-          <input type="number" id="age" min="18" max="70" /><br /><br />
+          <input
+            class="age"
+            type="number"
+            name="age"
+            min="18"
+            max="70"
+          /><br /><br />
 
           What option best describes your current role?<br />
-          <select name="roles" id="dropdown">
+          <select class="roles" name="roles" id="dropdown">
+            <option value=""></option>
             <option value="student">Student</option>
             <option value="fulltime">Fulltime employed</option>
             <option value="parttime">Parttime employed</option>
@@ -45,7 +62,6 @@
             id="radio"
             name="recommendation"
             value="Definitely"
-            checked
           />
           Definitely
           <input type="radio" id="radio" name="recommendation" value="Maybe" />
@@ -59,7 +75,8 @@
           Not sure <br /><br />
 
           What is your favorite activities of Yoganese Retreat?<br />
-          <select name="activities" id="dropdown">
+          <select class="activities" name="activities" id="dropdown">
+            <option value=""></option>
             <option value="vegan-cooking-class">Vegan Cooking Class</option>
             <option value="morning-stretch">Morning Stretch</option>
             <option value="biking-tour">Biking tour</option>
@@ -71,28 +88,28 @@
           What would you like to experience in the next Yoganese Retreat?<br />
           <input
             type="checkbox"
-            id="checkbox"
+            class="checkbox"
             name="experience"
             value="herbal-bath"
           />
           Herbal bath
           <input
             type="checkbox"
-            id="checkbox"
+            class="checkbox"
             name="experience"
             value="food-tour"
           />
           Food tour
           <input
             type="checkbox"
-            id="checkbox"
+            class="checkbox"
             name="experience"
             value="hot-yoga"
           />
           Hot Yoga
           <input
             type="checkbox"
-            id="checkbox"
+            class="checkbox"
             name="experience"
             value="yin-yang-yoga"
           />
@@ -106,7 +123,7 @@
           ></textarea
           ><br />
         </form>
-        <button type="submit" id="submit" onclick="validate()">Submit</button>
+        <button type="submit" class="submitBtn">Submit</button>
         <div class="error-msg"></div>
       </div>
     </div>
