@@ -97,6 +97,8 @@ input[type="email"],
   text-transform: uppercase;
   color: #eddeeb;
   border: none;
+  outline: none;
+  cursor: pointer;
   box-shadow: 5px 4px 15px var(--button);
   border-radius: 15px;
   margin-top: 20px;
