@@ -7,6 +7,8 @@
 :root {
   --overlay: #2a2e3c;
   --button: #fb5c05;
+  --header1: #000;
+  --header2: #333;
   --text-1: #3a60cf;
   --text-2: #9c9c9c;
   --primary: #eddeeb;
@@ -53,10 +55,17 @@ html::after {
   align-items: center;
   justify-content: center; */
   display: block;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   text-align: center;
   margin-bottom: 1.5rem;
   padding: 0 1.5rem;
+}
+.title {
+  color: var(--header1);
+  text-transform: uppercase;
+}
+.description {
+  color: var(--header2);
 }
 .form-container {
   width: 85vw;
@@ -84,25 +93,48 @@ input[type="email"],
   width: 100%;
   height: 40px;
   color: var(--secondary);
+  border-radius: 10px;
 }
 
 .form-container textarea {
   margin-top: 20px;
   padding: 0.5rem;
   outline: none;
+  border-radius: 10px;
+  width: 100%;
 }
 .form-container button {
   width: 50%;
   height: 3rem;
   text-transform: uppercase;
-  color: #eddeeb;
+  color: var(--header2);
+  font-weight: 800;
   border: none;
   outline: none;
   cursor: pointer;
   box-shadow: 5px 4px 15px var(--button);
-  border-radius: 15px;
+  border-radius: 20px;
   margin-top: 20px;
   background-color: var(--button);
+  position: relative;
+}
+
+.form-container button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: -100px;
+  background: #fff;
+  width: 35px;
+  height: 80px;
+  opacity: 40%;
+  transform: rotate(-45deg);
+}
+.form-container button:hover:after {
+  left: 120%;
+  transition: all 1200ms cubic-bezier(0.3, 1, 0.2, 1);
+  -webkit-transition: all 1200ms cubic-bezier(0.3, 1, 0.2, 1);
 }
 .error-msg {
   position: relative;
