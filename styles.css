@@ -126,8 +126,8 @@ input[type="email"],
   top: -20px;
   left: -100px;
   background: #fff;
-  width: 35px;
-  height: 80px;
+  width: 20px;
+  height: 75px;
   opacity: 40%;
   transform: rotate(-45deg);
 }
