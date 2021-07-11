@@ -1,10 +1,13 @@
 "use strict";
 //Select DOM elements
-const button = document.querySelector(".submitBtn");
+const submitBtn = document.querySelector(".submitBtn");
+const closeBtn = document.querySelector(".modal-close");
+const msgModal = document.querySelector(".msg-modal");
+const overlay = document.querySelector(".overlay");
 
 //Print error function
 const printMsg = function (msg) {
-  alert(msg);
+  msgModal.insertAdjacentText("beforeend", msg);
 };
 const validateForm = function () {
   const age = document.querySelector(".age").value;
@@ -54,8 +57,33 @@ const validateForm = function () {
     printMsg("Form has been successfully submitted!");
   }
 };
-//Add event listener to button
-button.addEventListener("click", function (e) {
+
+//Function to open the modal
+const openModal = function () {
+  overlay.classList.remove("hidden");
+  msgModal.classList.remove("hidden");
+};
+//Function to close the modal
+const closeModal = function () {
+  overlay.classList.add("hidden");
+  msgModal.classList.add("hidden");
+};
+//Add event listener to button to show modal message
+submitBtn.addEventListener("click", function (e) {
   e.preventDefault();
   validateForm();
+  openModal();
+});
+//Add event listener to the close button in the modal
+closeBtn.addEventListener("click", function () {
+  closeModal();
+});
+
+//Close modal onlick the overlay
+overlay.addEventListener("click", closeModal);
+//Close modal onpress Esc-key
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    closeModal();
+  }
 });
