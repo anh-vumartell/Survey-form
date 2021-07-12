@@ -158,6 +158,7 @@ input[type="email"],
   width: 80%;
   background-color: #fff;
   font-family: inherit;
+  font-size: 1rem;
   padding: 6rem;
   border-radius: 1.5rem;
   box-shadow: 0 1rem 4rem rgba(0.4, 0.3, 0, 0.226);
@@ -168,9 +169,17 @@ input[type="email"],
 }
 .modal-close {
   position: absolute;
-  top: 2rem;
-  right: 3rem;
-  max-width: 4rem;
+  bottom: 0.5rem;
+  right: 1rem;
+  max-width: 2rem;
+}
+.message-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-height: 4rem;
+  width: 55vw;
+  margin-bottom: 2rem;
 }
 /* Tablets */
 @media only screen and (min-width: 490px) {
@@ -186,6 +195,19 @@ input[type="email"],
     width: 30%;
     font-size: 1.8rem;
   }
+  .msg-modal {
+    font-size: 1.5rem;
+    width: 70vw;
+  }
+  .modal-close {
+    width: 3.5rem;
+    bottom: 1rem;
+  }
+
+  .message-header {
+    font-size: 1.6rem;
+    width: 60vw;
+  }
 }
 /* Desktop */
 @media only screen and (min-width: 1024px) {
@@ -196,5 +218,11 @@ input[type="email"],
   }
   .title-container {
     font-size: 2.5rem;
+  }
+  .msg-modal {
+    width: 50vw;
+  }
+  .message-header {
+    width: 45vw;
   }
 }

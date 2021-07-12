@@ -4,10 +4,11 @@ const submitBtn = document.querySelector(".submitBtn");
 const closeBtn = document.querySelector(".modal-close");
 const msgModal = document.querySelector(".msg-modal");
 const overlay = document.querySelector(".overlay");
+const msgContainer = document.querySelector(".message-container");
 
-//Print error function
+//Function to print error message
 const printMsg = function (msg) {
-  msgModal.insertAdjacentText("beforeend", msg);
+  msgContainer.insertAdjacentText("beforeend", msg);
 };
 const validateForm = function () {
   const age = document.querySelector(".age").value;
@@ -74,16 +75,19 @@ submitBtn.addEventListener("click", function (e) {
   validateForm();
   openModal();
 });
-//Add event listener to the close button in the modal
-closeBtn.addEventListener("click", function () {
+//Function to close & clear modal message
+const clearMsg = function () {
   closeModal();
-});
+  msgContainer.innerHTML = "";
+};
+//Add event listener to the close button in the modal
+closeBtn.addEventListener("click", clearMsg);
 
 //Close modal onlick the overlay
-overlay.addEventListener("click", closeModal);
+overlay.addEventListener("click", clearMsg);
 //Close modal onpress Esc-key
 document.addEventListener("keydown", function (e) {
   if (e.key === "Escape") {
-    closeModal();
+    clearMsg();
   }
 });
