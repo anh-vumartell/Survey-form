@@ -25,7 +25,7 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  position: relative;
+  /* position: relative; */
 }
 
 .page-container {
@@ -177,6 +177,18 @@ input[type="email"],
   width: 55vw;
   margin-bottom: 2rem;
 }
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 1.2rem;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+footer a {
+  text-decoration: none;
+  color: var(--text-2);
+}
 /* Tablets */
 @media only screen and (min-width: 490px) {
   .page-container {
@@ -202,6 +214,9 @@ input[type="email"],
   .message-header {
     font-size: 1.6rem;
     width: 60vw;
+  }
+  footer {
+    font-size: 2.5rem;
   }
 }
 /* Desktop */
