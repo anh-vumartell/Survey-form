@@ -55,7 +55,9 @@ const validateForm = function () {
   }
 
   if (!validField) {
-    printMsg("Form has been successfully submitted!");
+    printMsg(
+      "Form has been successfully submitted! Thank you for your feedback!"
+    );
   }
 };
 
